@@ -69,7 +69,7 @@
 
 .qkb-action-item {
   display: block;
-  padding: 0;
+  padding: 5px;
   outline: 0;
   border: 0;
   line-height: 1;
@@ -95,6 +95,12 @@
 
 .qkb-board-aciton--typing {
   .qkb-action-item--send {
+    opacity: 1;
+  }
+  .qkb-action-item--microphone {
+    opacity: 1;
+  }
+  .qkb-action-item--audio {
     opacity: 1;
   }
 }

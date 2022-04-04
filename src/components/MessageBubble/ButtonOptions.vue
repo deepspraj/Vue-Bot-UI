@@ -38,6 +38,7 @@ export default {
   methods: {
     selectOption (value) {
       this.selectedItem = value
+      console.log(this.mainData.text)
       EventBus.$emit('select-button-option', value)
     }
   }

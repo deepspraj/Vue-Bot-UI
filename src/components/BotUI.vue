@@ -45,6 +45,9 @@ import BoardAction from './Board/Action'
 import AppStyle from './AppStyle'
 import BubbleIcon from '../assets/icons/bubble.svg'
 import CloseIcon from '../assets/icons/close.svg'
+import Vue from 'vue'
+
+Vue.prototype.$appName = false
 
 export default {
   name: 'VueBotUI',
