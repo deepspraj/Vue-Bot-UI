@@ -116,7 +116,6 @@ export default {
           .map(result => result.transcript)
           .join('')
         this.messageText = text
-        console.log(this.messageText)
       })
       // end of transcription
       recognition.addEventListener('end', () => {
@@ -132,15 +131,11 @@ export default {
       recognition.start()
     },
     audioSwitch () {
-      console.log('Before Vue.prototype.$appName')
-      console.log(Vue.prototype.$appName)
-      if (Vue.prototype.$appName) {
-        Vue.prototype.$appName = false
+      if (Vue.prototype.$audioOut) {
+        Vue.prototype.$audioOut = false
       } else {
-        Vue.prototype.$appName = true
+        Vue.prototype.$audioOut = true
       }
-      console.log('after Vue.prototype.$appName')
-      console.log(Vue.prototype.$appName)
     },
     textToAudio (botMessage) {
       if (botMessage) {
@@ -149,10 +144,8 @@ export default {
         sInstance.lang = this.lang_
 
         sInstance.onend = function (event) {
-          console.log('SpeechSynthesisUtterance.onend')
         }
         sInstance.onerror = function (event) {
-          console.error('SpeechSynthesisUtterance.onerror')
         }
         sInstance.pitch = this.pitch
         sInstance.rate = this.rate

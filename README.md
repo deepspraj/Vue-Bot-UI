@@ -1,6 +1,27 @@
 
 # Vue Bot UI
 
+
+#### Message to original developer and the one who find this repository a customizable
+
+#### The original package is published on github at [https://github.com/juzser/vue-bot-ui](https://github.com/juzser/vue-bot-ui).
+
+I upgraded this vue app with feature of audio speech recognition for specific language i.e. Hindi (Indic Language).
+
+The way which I implemented the feature may not be the optimal or best but solve our issues.
+
+The app is just upgraded for my C-DAC project and I have no interest in maintaining it.
+
+I dont even know JS but tried to accomplish our main objective and integrate the feature.
+
+All the credit goes to original developer of this repository.
+
+Thank You, Hoang Son Nguyen for developing such npm package. Please try to maintain and keep upto date (a humble request from naive developer).
+
+<br>
+
+## Original README follows 
+
 #### For the one who is finding a customizable chatbot UI.
 
 I build for my private project, but I tried to bring as many options as I think someone need it, so feel free to use it.

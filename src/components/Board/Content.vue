@@ -21,8 +21,7 @@ import Vue from 'vue'
 
 var counter = new Vue({
   data: {
-    messageCounter: 0,
-    audioout: false
+    messageCounter: 0
   }
 })
 
@@ -56,7 +55,7 @@ export default {
   computed: {
     audiocaller () {
       if (this.mainData.length > counter.messageCounter) {
-        if (Vue.prototype.$appName) {
+        if (Vue.prototype.$audioOut) {
           if (this.mainData[counter.messageCounter].agent === 'bot') {
             this.$root.$refs.Action.textToAudio(this.mainData[counter.messageCounter].text)
           }
