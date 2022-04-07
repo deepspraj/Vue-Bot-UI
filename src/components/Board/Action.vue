@@ -6,7 +6,8 @@
     slot(name="actions")
     button.qkb-action-item.qkb-action-item--audio#textToAudioId(@click="audioSwitch")
       slot(name="audioButton")
-        IconAudio.qkb-action-icon.qkb-action-icon--audio
+        IconAudio.qkb-action-icon.qkb-action-icon--audio(@mouseover="showInfo = true", @mouseleave="showInfo = false")
+        .info(v-if="showInfo") {{ audioOutputMessage }}
     .qkb-board-action__msg-box
       input.qkb-board-action__input#qkb-board-action__input(
         type="text",
@@ -24,7 +25,8 @@
       slot(name="actions")
       button.qkb-action-item.qkb-action-item--microphone(@click="audioToText")
         slot(name="microphoneButton")
-          IconMicrophone.qkb-action-icon.qkb-action-icon--microphone
+          IconMicrophone.qkb-action-icon.qkb-action-icon--microphone(@mouseover="showMicrophone = true", @mouseleave="showMicrophone = false")
+          .microphoneStatus(v-if="showMicrophone") {{ audioInputMessage }}
       button.qkb-action-item.qkb-action-item--send(@click="sendMessage")
         slot(name="sendButton")
           IconSend.qkb-action-icon.qkb-action-icon--send
@@ -68,7 +70,10 @@ export default {
       rate: 1,
       synth: window.speechSynthesis,
       validation: false,
-      audioout: false
+      audioOutputMessage: 'Audio Output is OFF',
+      audioInputMessage: 'Microphone is OFF',
+      showInfo: false,
+      showMicrophone: false
     }
   },
 
@@ -108,6 +113,7 @@ export default {
       const recognition = new window.SpeechRecognition()
       recognition.lang = this.lang_
       recognition.interimResults = true
+      this.audioInputMessage = 'Microphone is ON'
 
       // event current voice record word
       recognition.addEventListener('result', event => {
@@ -125,6 +131,7 @@ export default {
           if (this.messageText) {
             this.$emit('msg-send', { text: this.messageText })
             this.messageText = null
+            this.audioInputMessage = 'Microphone is OFF'
           }
         }, 2000)
       })
@@ -133,8 +140,10 @@ export default {
     audioSwitch () {
       if (Vue.prototype.$audioOut) {
         Vue.prototype.$audioOut = false
+        this.audioOutputMessage = 'Audio Output is OFF'
       } else {
         Vue.prototype.$audioOut = true
+        this.audioOutputMessage = 'Audio Output is ON'
       }
     },
     textToAudio (botMessage) {

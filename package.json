@@ -1,11 +1,8 @@
 {
-  "name": "vue-bot-ui",
-  "version": "0.2.8",
+  "name": "vue-bot-ui-audio",
+  "version": "0.2.9",
   "description": "Chatbot UI using Vue.js 2",
-  "author": {
-    "name": "SonNH",
-    "email": "sonnh@ownego.com"
-  },
+  "author": "Deepak <deepprajapati01@gmail.com>",
   "main": "dist/vue-bot-ui.common.js",
   "files": [
     "dist/*",
@@ -53,15 +50,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JuzSer/vue-bot-ui.git"
+    "url": "git+https://github.com/deepspraj/Vue-Bot-UI.git"
   },
   "bugs": {
-    "url": "https://github.com/JuzSer/vue-bot-ui/issues"
+    "url": "https://github.com/deepspraj/Vue-Bot-UI/issues"
   },
-  "homepage": "https://github.com/JuzSer/vue-bot-ui#readme",
+  "homepage": "https://github.com/deepspraj/Vue-Bot-UI#readme",
   "license": "MIT",
   "dependencies": {
     "css-loader": "^3.6.0",
     "vue-bot-ui": "^0.2.8"
+  },
+  "directories": {
+    "test": "tests"
   }
 }

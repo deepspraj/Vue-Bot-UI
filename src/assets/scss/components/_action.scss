@@ -104,3 +104,39 @@
     opacity: 1;
   }
 }
+
+#qkb-action-icon--audio{
+  color: #016BA8;
+  font-size: 16px;
+  &:hover{
+    cursor: pointer;
+    color: #FFB715;
+    transition: 1s all;
+  }
+}
+
+.info{
+  background: #016BA8;
+  color: #ffffff !important;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.55);
+  width: 40%;
+  left: -10%;
+  margin-top: 15px;
+  position: absolute;
+  z-index: 1;
+}
+
+.microphoneStatus{
+  background: #016BA8;
+  color: #ffffff !important;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.55);
+  width: 40%;
+  right: -5%;
+  margin-top: 15px;
+  position: absolute;
+  z-index: 1;
+}
