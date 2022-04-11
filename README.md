@@ -29,17 +29,20 @@ I build for my private project, but I tried to bring as many options as I think 
 *Demo page is coming soon.*
 
 <p align="center">
-<img width="300" alt="vue bot UI" src="https://user-images.githubusercontent.com/5735071/71614782-52cc2280-2be0-11ea-8c1b-7af063401d3d.png">
+<img width="300" alt="vue bot UI 1" src="https://i.ibb.co/qnMt0CC/Screenshot-2022-04-07-233944.png">
 </p>
 
+<p align="center">
+<img width="300" alt="vue bot UI 2" src="https://i.ibb.co/PZ9jBX6/Screenshot-2022-04-07-234012.png">
+</p>
 
 ## Install
 
 ```bash
-npm install vue-bot-ui
+npm install vue-bot-ui-audio
 
 // or
-yarn add vue-bot-ui
+yarn add vue-bot-ui-audio
 ```
 
 ## Usage
@@ -47,7 +50,7 @@ yarn add vue-bot-ui
 Import & register the component
 
 ```javascript
-import { VueBotUI } from 'vue-bot-ui'
+import { VueBotUI } from 'vue-bot-ui-audio'
 
 export default {
   components: {
